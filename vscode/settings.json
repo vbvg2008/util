@@ -1,0 +1,107 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    // Editor
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "editor.rulers": [
+        120
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    // Files
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.mypy_cache/**": true,
+        "**/__pycache__/**": true
+    },
+    // isort, automatically sort imports
+    "isort.args": [
+        "-l",
+        "120",
+        "-m",
+        "2",
+        "--src",
+        "${workspaceFolder}"
+    ],
+    // yapf code formatter
+    "editor.defaultFormatter": "eeyore.yapf",
+    // pylint
+    "python.languageServer": "Default",
+    "pylint.args": [
+        "--max-line-length=120",
+        "--max-attributes=20",
+        "--ignored-modules=tensorflow,cv2",
+        "--generated-members=numpy.*,torch.*",
+        "--good-names=df,op,f,i,j,k,x,y,z",
+        "--jobs=0",
+        "--disable=missing-class-docstring",
+        "--disable=missing-function-docstring",
+        "--disable=missing-module-docstring",
+    ],
+    // Files Excluded By VSCode
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/.ipynb_checkpoints": true,
+        "*.egg-info/**": true,
+        "**/.mypy_cache": true,
+    },
+    "workbench.colorTheme": "Monokai",
+    "accessibility.signals.lineHasError": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalCommandFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off"
+    },
+    "yapf.args": [
+        "--style={based_on_style: pep8, column_limit: 120, coalesce_brackets: True, dedent_closing_brackets=False, each_dict_entry_on_separate_line: True, spaces_before_comment: 2, split_before_first_argument: False, split_before_named_assigns: False, split_all_top_level_comma_separated_values : True, use_tabs: False, blank_line_before_nested_class_or_def: False}"
+    ],
+}
